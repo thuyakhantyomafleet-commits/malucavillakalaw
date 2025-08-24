@@ -3,861 +3,2204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maluca Villa Kalaw | Restaurant & Bar</title>
-    <meta name="description" content="Experience fine dining in the heart of Kalaw at Maluca Villa. European, Danu & Burmese cuisine with mountain views.">
-    <meta name="keywords" content="Maluca Villa, Kalaw restaurant, Myanmar dining, Shan State cuisine, European food, Burmese food, Danu food, fine dining">
-    <meta name="author" content="Maluca Villa Kalaw">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Maluca Villa Kalaw | Restaurant & Bar">
-    <meta property="og:description" content="Experience fine dining in the heart of Kalaw at Maluca Villa. European, Danu & Burmese cuisine with mountain views.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.malucavillakalaw.com">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Maluca Villa - Restaurant, Bar & Natural Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
-        body { 
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f5f0; /* Classic cream background */
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        :root {
+            --primary-color: #2d6a4f;
+            --secondary-color: #52b788;
+            --accent-color: #95d5b2;
+            --light-color: #d8f3dc;
+            --dark-color: #1b4332;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
         }
-        h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
-        .hero-bg { 
-            background: linear-gradient(rgba(61, 45, 28, 0.85), rgba(61, 45, 28, 0.95)), 
-                        url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover; 
-            background-position: center; 
-            min-height: 80vh; 
-            display:flex; 
-            justify-content:center; 
-            align-items:center; 
-            color:white; 
-            text-align:center;
-            border-bottom: 4px solid #d4af37; /* Classic gold border */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .ambiance-card:hover { transform: translateY(-5px); box-shadow:0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease;}
-        .gallery-img:hover { transform: scale(1.05); transition: all 0.5s ease;}
-        .scroll-smooth { scroll-behavior: smooth;}
-        .testimonial-card { 
-            background: linear-gradient(135deg, #f9f6f2 0%, #ffffff 100%);
-            border: 1px solid #e6ddd4;
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
         }
-        .hours-card { 
-            background: linear-gradient(135deg, #fef9e7 0%, #fde68a 100%);
-            border: 1px solid #d4af37;
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .classic-border {
-            border: 2px solid #d4af37;
-            border-radius: 4px;
-        }
-        .classic-button {
-            background-color: #8b4513;
-            border: 2px solid #d4af37;
+        
+        /* Header Styles */
+        header {
+            background-color: var(--dark-color);
             color: white;
-            transition: all 0.3s ease;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .classic-button:hover {
-            background-color: #d4af37;
-            color: #3d2d1c;
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 20px;
             margin-bottom: 30px;
         }
-        .section-title:after {
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background-color: #d4af37;
+            background-color: var(--secondary-color);
         }
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
         }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background-color: #d4af37;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
+        
+        /* About Section */
+        .about {
+            background-color: var(--light-bg);
         }
-        .nav-link:hover:after {
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
             width: 100%;
+            height: auto;
+            display: block;
         }
-        .footer-bg {
-            background-color: #3d2d1c;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-        /* Menu Section Styles */
-        .btn {
+        
+        .founder-story {
             background-color: white;
-            border: 1px solid #d4af37;
-            border-radius: 9999px;
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        .btn:hover {
-            background-color: #fef9e7;
+        
+        .founder-story h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-size: 24px;
         }
-        .menu-block {
-            margin-bottom: 3rem;
-            text-align: left;
+        
+        .founder-story h4 {
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 20px;
         }
-        .menu-title {
-            font-size: 1.5rem;
+        
+        .founder-story ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .founder-story li {
+            margin-bottom: 10px;
+        }
+        
+        .green-initiative {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .green-initiative h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .green-initiative h4 {
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 20px;
+        }
+        
+        /* Kalaw Section */
+        .kalaw {
+            background-color: white;
+        }
+        
+        .kalaw-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .kalaw-text h3 {
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .kalaw-text p {
+            margin-bottom: 20px;
+        }
+        
+        .kalaw-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .kalaw-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .attractions {
+            margin-top: 50px;
+        }
+        
+        .attractions h3 {
+            font-size: 24px;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .attraction-card {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .attraction-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .attraction-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .attraction-card:hover .attraction-image img {
+            transform: scale(1.1);
+        }
+        
+        .attraction-content {
+            padding: 20px;
+        }
+        
+        .attraction-content h4 {
+            font-size: 18px;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .attraction-content p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Coffee Section */
+        .coffee {
+            background-color: var(--light-bg);
+        }
+        
+        .coffee-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .coffee-text h3 {
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .coffee-text p {
+            margin-bottom: 20px;
+        }
+        
+        .coffee-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .coffee-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .coffee-process {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .process-title {
+            font-size: 24px;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--light-color);
+            transition: transform 0.3s;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-10px);
+        }
+        
+        .step-icon {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .step-title {
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
+            color: var(--dark-color);
+            margin-bottom: 10px;
         }
-        .menu-list {
-            list-style-type: none;
-            padding-left: 0;
-            color: #4b5563;
+        
+        .step-description {
+            font-size: 14px;
+            color: #666;
         }
-        .menu-list li {
-            margin-bottom: 0.5rem;
+        
+        .coffee-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .coffee-item {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .coffee-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .coffee-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        .coffee-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .coffee-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .coffee-item:hover .coffee-image img {
+            transform: scale(1.1);
+        }
+        
+        .coffee-content {
+            padding: 25px;
+        }
+        
+        .coffee-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .coffee-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .coffee-features {
+            margin-bottom: 20px;
+        }
+        
+        .coffee-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .coffee-feature i {
+            color: var(--secondary-color);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        
+        .coffee-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px dashed #e5e7eb;
         }
-        .menu-list li:last-child {
-            border-bottom: none;
+        
+        .coffee-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
         }
-        .menu-price {
+        
+        .coffee-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .coffee-btn:hover {
+            background-color: var(--primary-color);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-card-content {
+            padding: 25px;
+        }
+        
+        .service-card-content h3 {
+            font-size: 22px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-card-content p {
+            margin-bottom: 20px;
+        }
+        
+        /* Menu Section */
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .menu-tab {
+            background-color: var(--light-bg);
+            border: none;
+            padding: 10px 25px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .menu-tab.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .menu-item {
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .menu-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+        
+        .menu-item-content {
+            padding: 15px;
+            flex: 1;
+        }
+        
+        .menu-item-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .menu-item-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .menu-item-content .price {
             font-weight: 600;
-            color: #8b4513;
+            color: var(--secondary-color);
         }
-        .menu-remark {
-            font-style: italic;
-            font-size: 0.875rem;
-            color: #6b7280;
-            margin-top: 0.5rem;
+        
+        /* Natural Products Section */
+        .natural-products {
+            background-color: var(--light-bg);
         }
-        .submenu {
-            margin-top: 1rem;
-            margin-left: 1rem;
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
-        /* Image fallback styles */
-        .img-fallback {
-            background-color: #e5e7eb;
+        
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .product-features {
+            margin-bottom: 20px;
+        }
+        
+        .product-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .product-feature i {
+            color: var(--secondary-color);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .product-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .product-btn:hover {
+            background-color: var(--primary-color);
+        }
+        
+        /* Events Section */
+        .events {
+            background-color: var(--light-bg);
+        }
+        
+        .event-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            md:flex-direction: row;
+        }
+        
+        .event-image {
+            width: 100%;
+            md:width: 40%;
+            height: 250px;
+            md:height: auto;
+        }
+        
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .event-content {
+            padding: 30px;
+            flex: 1;
+        }
+        
+        .event-date {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .event-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .event-content p {
+            margin-bottom: 20px;
+        }
+        
+        .event-details {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .event-detail {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .event-detail i {
+            color: var(--secondary-color);
+            margin-right: 8px;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            font-size: 20px;
+            color: var(--secondary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-form {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--light-bg);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6b7280;
-            font-size: 0.875rem;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
             text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .kalaw-content,
+            .coffee-intro,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-card {
+                flex-direction: column;
+            }
+            
+            .event-image {
+                width: 100%;
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .menu-item img {
+                width: 100%;
+                height: 180px;
+            }
         }
     </style>
 </head>
-<body class="scroll-smooth">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 border-b-2 border-amber-700">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="bg-amber-700 text-white rounded-full p-2"><i class="fas fa-utensils text-xl"></i></div>
-                <div>
-                    <h1 class="text-xl font-bold text-amber-800">Maluca Villa</h1>
-                    <p class="text-xs text-gray-600">Kalaw, Myanmar</p>
-                </div>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Maluca Villa Logo">
+                <h1>Maluca Villa</h1>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Home</a>
-                <a href="#menu" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Menu</a>
-                <a href="#ambiance" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Ambiance</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-amber-700 font-medium">About</a>
-                <a href="#gallery" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Gallery</a>
-                <a href="#testimonials" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Reviews</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Contact</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#kalaw">Kalaw</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#coffee">Coffee</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
             </div>
-            <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-amber-700">Home</a>
-            <a href="#menu" class="block py-2 text-gray-700 hover:text-amber-700">Menu</a>
-            <a href="#ambiance" class="block py-2 text-gray-700 hover:text-amber-700">Ambiance</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-amber-700">About</a>
-            <a href="#gallery" class="block py-2 text-gray-700 hover:text-amber-700">Gallery</a>
-            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-amber-700">Reviews</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-amber-700">Contact</a>
-        </div>
-    </nav>
-
+    </header>
     <!-- Hero Section -->
-    <section id="home" class="hero-bg">
-        <div>
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 classic-border px-8 py-4 inline-block">Maluca Villa</h1>
-            <p class="text-xl md:text-2xl mb-6">Fine Dining Experience in the Heart of Kalaw</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#menu" class="classic-button px-8 py-3 rounded-full font-medium">Explore Our Menu</a>
-                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full font-medium">Make Reservation</a>
-            </div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bring the Earth to Your Skin</h2>
+            <p>Experience natural dining, camping, and wellness at Maluca Villa in Kalaw</p>
+            <a href="#services" class="btn">Explore Our Services</a>
         </div>
     </section>
-
-    <!-- Hours Section -->
-    <section class="py-12 bg-amber-50">
-        <div class="container mx-auto px-6">
-            <div class="hours-card rounded-xl shadow-lg p-6 max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div>
-                        <h3 class="text-2xl font-bold text-amber-800 mb-2">Opening Hours</h3>
-                        <p class="text-gray-700">We're open 6 days a week</p>
-                    </div>
-                    <div class="mt-4 md:mt-0 text-center md:text-right">
-                        <p class="text-lg font-medium text-red-600">Monday: Closed</p>
-                        <p class="text-lg font-medium text-amber-800">Tuesday - Sunday: 9:30 AM - 8:30 PM</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="bg-neutral-50 text-gray-800 py-16 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-4xl font-serif font-semibold mb-4 section-title">Maluca Villa Kalaw Menu</h2>
-            <p class="text-lg text-gray-600 mb-10">A curated selection of European, Danu, and Grill specialties</p>
-            
-            <!-- Navigation Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button onclick="scrollToSection('starters')" class="btn">🍤 Snacks & Starters</button>
-                <button onclick="scrollToSection('soup')" class="btn">🍜 Asian Soup</button>
-                <button onclick="scrollToSection('danu')" class="btn">🍛 Danu Cuisine</button>
-                <button onclick="scrollToSection('main')" class="btn">🍽️ Main Dishes</button>
-                <button onclick="scrollToSection('pasta')" class="btn">🍝 Pasta</button>
-                <button onclick="scrollToSection('salads')" class="btn">🥗 Salads</button>
-                <button onclick="scrollToSection('pizza')" class="btn">🍕 Pizzas</button>
-                <button onclick="scrollToSection('burgers')" class="btn">🍔 Burgers & Sandwiches</button>
-                <button onclick="scrollToSection('bbq')" class="btn">🥩 BBQ</button>
-                <button onclick="scrollToSection('bar')" class="btn">🍹 Bar</button>
-                <button onclick="scrollToSection('desserts')" class="btn">🍰 Desserts</button>
-            </div>
-            
-            <!-- Snacks & Starters Section -->
-            <div id="starters" class="menu-block">
-                <h3 class="menu-title">🍤 Snacks & Starters</h3>
-                <ul class="menu-list">
-                    <li><span>Prawn Tempura</span> <span class="menu-price">22,000 MMK</span></li>
-                    <li><span>Crispy Prawn</span> <span class="menu-price">22,000 MMK</span></li>
-                    <li><span>Satay (Chicken/Pork/Beef)</span> <span class="menu-price">13,000 - 15,000 - 18,000 MMK</span></li>
-                    <li><span>Fried Fish Finger</span> <span class="menu-price">25,000 MMK</span></li>
-                    <li><span>Fried Calamari</span> <span class="menu-price">19,000 MMK</span></li>
-                    <li><span>Fried Pork Ribs</span> <span class="menu-price">16,000 MMK</span></li>
-                    <li><span>Potato Cheese Balls</span> <span class="menu-price">23,000 MMK</span></li>
-                    <li><span>Fried Chicken Wing</span> <span class="menu-price">18,000 MMK</span></li>
-                    <li><span>Vegetable Tempura</span> <span class="menu-price">16,000 MMK</span></li>
-                    <li><span>French Fries</span> <span class="menu-price">15,000 MMK</span></li>
-                </ul>
-            </div>            
-            <!-- Asian Soup Section -->
-            <div id="soup" class="menu-block">
-                <h3 class="menu-title">🍜 Asian Soup</h3>
-                <ul class="menu-list">
-                    <li><span>Pickled Mustard Soup (Chicken/Pork/Beef)</span> <span class="menu-price">13,000 - 15,000 - 17,000 MMK</span></li>
-                    <li><span>Tom Yum Soup</span> <span class="menu-price">18,000 - 20,000 - 22,000 - 25,000 MMK</span></li>
-                </ul>
-            </div>
-              <!-- SOUP -->
-            <div id="soup" class="menu-block">
-                <h3 class="menu-title">🍜 Asian Soup</h3>
-                <ul class="menu-list">
-                    <li><span>Pickled Mushroom Soup</span> <span class="menu-price">18,000 MMK</span></li>
-                    <li><span>Pickled Tomato Soup</span> <span class="menu-price">18,000 MMK</span></li>
-                    <li><span>Pickled Pumpkin Soup</span> <span class="menu-price">18,000 MMK</span></li>
-            </div>
-            <!-- Danu Cuisine Section -->
-            <div id="danu" class="menu-block">
-                <h3 class="menu-title">🍛 Danu Cuisine</h3>
-                <ul class="menu-list">
-                    <li><span>Beef & Tea Leaf Curry</span> <span class="menu-price">20,000 MMK</span></li>
-                    <li><span>Steamed Butter Fish with Banana Leaf</span> <span class="menu-price">20,000 MMK</span></li>
-                    <li><span>Chicken Jue Curry</span> <span class="menu-price">18,000 MMK</span></li>
-                    <li><span>Chicken Basil Curry</span> <span class="menu-price">18,000 MMK</span></li>
-                    <li><span>Pork & Tea Leaf Curry</span> <span class="menu-price">19,000 MMK</span></li>
-                </ul>
-                
-                <h4 class="text-lg font-semibold mt-6 mb-3">One Portion</h4>
-                <ul class="menu-list">
-                    <li><span>Maluca Fried Rice (with Beef/Chicken/Pork)</span> <span class="menu-price">18,000 - 16,000 MMK</span></li>
-                    <li><span>Maluca H & S Fried Rice (with Beef/Chicken/Pork)</span> <span class="menu-price">22,000 - 18,000 - 20,000 MMK</span></li>
-                    <li><span>Maluca Pad Thai (with Beef/Chicken/Pork)</span> <span class="menu-price">18,000 - 15,000 - 16,000 MMK</span></li>
-                    <li><span>Gravy Rice (Chicken/Pork)</span> <span class="menu-price">15,000 - 16,000 MMK</span></li>
-                    <li><span>Nasi Goreng (Beef/Pork/Chicken)</span> <span class="menu-price">25,000 - 22,000 - 20,000 MMK</span></li>
-                    <li><span>Fried Chicken (Basil)</span> <span class="menu-price">13,000 MMK</span></li>
-                    <li><span>Fried Beef (Basil)</span> <span class="menu-price">15,000 MMK</span></li>
-                    <li><span>Fried Mix Vegetable</span> <span class="menu-price">12,000 MMK</span></li>
-                    <li><span>Ka Paung (Chicken/Pork/Beef)</span> <span class="menu-price">14,000 - 16,000 - 18,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- Main Dishes Section -->
-            <div id="main" class="menu-block">
-                <h3 class="menu-title">🍽️ Main Dishes</h3>
-                <ul class="menu-list">
-                    <li><span>Fish&Chip</span> <span class="menu-price">28,000 MMK</span></li>
-                    <li><span>Pan Fried Chicken</span> <span class="menu-price">36,000 MMK</span></li>
-                    <li><span>Pan Fried Butter Fish</span> <span class="menu-price">38,000 MMK</span></li>
-                    <li><span>Maluca Grilled</span> <span class="menu-price">47,000 MMK</span></li>
-                    <li><span>Beef Steak (Local)</span> <span class="menu-price">48,000 MMK</span></li>
-                    <li><span>Pork Steak</span> <span class="menu-price">42,000 MMK</span></li>
-                    <li><span>Chicken Schnitzel</span> <span class="menu-price">25,000 MMK</span></li>
-                    <li><span>Pork Schnitzel</span> <span class="menu-price">27,000 MMK</span></li>
-                    <li><span>Pan Grilled Salmon</span> <span class="menu-price">60,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- Pasta Section -->
-            <div id="pasta" class="menu-block">
-                <h3 class="menu-title">🍝 Pasta</h3>
-                <ul class="menu-list">
-                    <li><span>Maluca King</span> <span class="menu-price">25,000 MMK</span></li>
-                    <li><span>Aglio E Olio</span> <span class="menu-price">15,000 MMK</span></li>
-                    <li><span>Aglio E Olio with Bacon and dry chili</span> <span class="menu-price">20,000 MMK</span></li>
-                    <li><span>Carbonara</span> <span class="menu-price">23,000 MMK</span></li>
-                    <li><span>Bolognese</span> <span class="menu-price">25,000 MMK</span></li>
-                    <li><span>Marinara</span> <span class="menu-price">28,000 MMK</span></li>
-                    <li><span>Pomodoro Sauce</span> <span class="menu-price">16,000 MMK</span></li>
-                    <li><span>Spaghetti Arrabbiata</span> <span class="menu-price">15,000 MMK</span></li>
-                    <li><span>Cream Salmon</span> <span class="menu-price">33,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- Salads Section -->
-            <div id="salads" class="menu-block">
-                <h3 class="menu-title">🥗 Salads</h3>
-                <ul class="menu-list">
-                    <li><span>Salami Salad</span> <span class="menu-price">50,000 MMK</span></li>
-                    <li><span>Maluca Salad</span> <span class="menu-price">25,000 MMK</span></li>
-                    <li><span>Chef's Salad</span> <span class="menu-price">28,000 MMK</span></li>
-                    <li><span>Caesar Salad</span> <span class="menu-price">26,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- Pizzas Section -->
-            <div id="pizza" class="menu-block">
-                <h3 class="menu-title">🍕 Pizzas</h3>
-                <ul class="menu-list">
-                    <li><span>Maluca Singture Pizza</span> <span class="menu-price">48,000 MMK</span></li>
-                    <li><span>Pepperoni Pizza</span> <span class="menu-price">32,000 MMK</span></li>
-                    <li><span>Hawaiian Pizza</span> <span class="menu-price">32,000 MMK</span></li>
-                    <li><span>Ham & Mushroom</span> <span class="menu-price">32,000 MMK</span></li>
-                    <li><span>Seafood Pizza</span> <span class="menu-price">35,000 MMK</span></li>
-                    <li><span>Tea Leaf Pizza (Pork/Beef)</span> <span class="menu-price">30,000 MMK</span></li>
-                    <li><span>Chicken Pizza</span> <span class="menu-price">28,000 MMK</span></li>
-                    <li><span>Margarita Pizza</span> <span class="menu-price">22,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- Burgers & Sandwiches Section -->
-            <div id="burgers" class="menu-block">
-                <h3 class="menu-title">🍔 Burgers & Sandwiches</h3>
-                <ul class="menu-list">
-                    <li><span>Jumbo Burger (Beef/Chicken/Pork)</span> <span class="menu-price">25,000 - 20,000 - 23,000 MMK</span></li>
-                    <li><span>Sandwich (Tuna/Chicken/Cheese)</span> <span class="menu-price">17,000 - 16,000 - 15,000 MMK</span></li>
-                    <li><span>Burger (Beef/Chicken/Pork)</span> <span class="menu-price">22,000 - 18,000 - 20,000 MMK</span></li>
-                    <li><span>Club Sandwich</span> <span class="menu-price">16,000 MMK</span></li>
-                    <li><span>Ham & Cheese Sandwich</span> <span class="menu-price">20,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- BBQ Section -->
-            <div id="bbq" class="menu-block">
-                <h3 class="menu-title">🥩 BBQ</h3>
-                <ul class="menu-list">
-                    <li><span>Beef BBQ</span> <span class="menu-price">27,000 MMK</span></li>
-                    <li><span>Pork BBQ</span> <span class="menu-price">25,000 MMK</span></li>
-                    <li><span>Chicken BBQ</span> <span class="menu-price">23,000 MMK</span></li>
-                </ul>
-                <p class="menu-remark">All BBQ served with French fries.</p>
-            </div>
-            
-            <!-- Bar Section -->
-            <div id="bar" class="menu-block">
-                <h3 class="menu-title">🍹 Bar (Bartender/Barista/Bakery)</h3>
-                <!-- SPECIAL COCKTAIL -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mb-3">🍸 Bartender - Cocktails & Spirits</h4>
-                    <ul class="menu-list">
-                        <li><span>Maluca Pot</span> <span class="menu-price">15,000 MMK</span></li>
-                        <li><span>Shan Traditional Sour</span> <span class="menu-price">15,000 MMK</span></li>
-                        <li><span>Chok Choi Martini</span> <span class="menu-price">16,000 MMK</span></li>                        
-                    </ul>
-                </div>
-                <!-- COCKTAIl -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mb-3">🍸 Bartender - Cocktails & Spirits</h4>
-                    <ul class="menu-list">
-                        <li><span>Daiquiri</span> <span class="menu-price">15,000 MMK</span></li>
-                        <li><span>Mojito</span> <span class="menu-price">15,000 MMK</span></li>
-                        <li><span>Gin Fizz</span> <span class="menu-price">16,000 MMK</span></li>
-                        <li><span>Pink Lady</span> <span class="menu-price">16,000 MMK</span></li>
-                        <li><span>Margarita(Blue/White)</span> <span class="menu-price">16,000 MMK</span></li>
-                        <li><span>Martini(dry-wet-dirty) Vodka or Gin</span> <span class="menu-price">16,000 MMK</span></li>
-                        <li><span>Pina Colada</span> <span class="menu-price">16,000 MMK</span></li>
-                        <li><span>Old Faction</span> <span class="menu-price">17,000 MMK</span></li>
-                        <li><span>Tequila Sunrise</span> <span class="menu-price">17,000 MMK</span></li>
-                        <li><span>Fruit Cocktail</span> <span class="menu-price">20,000 MMK</span></li>
-                        <li><span>Cosmo Politan</span> <span class="menu-price">18,000 MMK</span></li>
-                        <li><span>Sidecar (Gin)</span> <span class="menu-price">12,000 MMK</span></li>
-                        <li><span>Singapore Sling</span> <span class="menu-price">18,000 MMK</span></li>
-                        <li><span>Mai Tai</span> <span class="menu-price">20,000 MMK</span></li>
-                        <li><span>AK 47</span> <span class="menu-price">22,000 MMK</span></li>
-                        <li><span>Long Island Ice</span> <span class="menu-price">18,000 MMK</span></li>
-                        <li><span>Beer Cocktail(with Corona Beer)</span> <span class="menu-price">23,000 MMK</span></li>
-                    </ul>
-                </div>
-                <!-- SOUR -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mb-3">🍸 Bartender - Cocktails & Spirits</h4>
-                    <ul class="menu-list">
-                        <li><span>Gin Sour</span> <span class="menu-price">15,000 MMK</span></li>
-                        <li><span>Rum Sour(Local)</span> <span class="menu-price">12,000 MMK</span></li>
-                        <li><span>Rum Sour(Bacardi)</span> <span class="menu-price">15,000 MMK</span></li>    
-                        <li><span>Whisky Sour</span> <span class="menu-price">15,000 MMK</span></li>                    
-                    </ul>
-                </div>
-                    <!-- WINE (BOTTLE) -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mb-3">🍸 Bartender - Cocktails & Spirits</h4>
-                    <ul class="menu-list">
-                        <li><span>Aythaya(White/Local)</span> <span class="menu-price">65,000 MMK</span></li>
-                        <li><span>Aythaya(Red/Local)</span> <span class="menu-price">70,000 MMK</span></li>
-                        <li><span>La Bodega(Red/Local</span> <span class="menu-price">80,000 MMK</span></li>    
-                        <li><span>Maluca Damson(Homemade Wine)</span> <span class="menu-price">40,000 MMK</span></li>                    
-                    </ul>
-                </div>
-                <!-- Barista Section -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mt-6 mb-3">☕ Barista - Coffee & Tea</h4>
-                    <ul class="menu-list">
-                        <li><span>Espresso Single</span> <span class="menu-price">7,000 MMK</span></li>
-                        <li><span>Espresso Double</span> <span class="menu-price">8,000 MMK</span></li>
-                        <li><span>Espresso Macchiato</span> <span class="menu-price">9,000 MMK</span></li>
-                        <li><span>Cappuccino</span> <span class="menu-price">9,000 - 12,000 - 14,000 MMK</span></li>
-                        <li><span>Latte</span> <span class="menu-price">9,000 MMK</span></li>
-                        <li><span>Americano</span> <span class="menu-price">8,000 - 9,500  MMK</span></li>
-                        <li><span>Macchiato(Hazeinut/Caremel/Vanila)</span> <span class="menu-price">12,000 - 14,000 - 16,000 MMK</span></li>
-                        <li><span>Mocha</span> <span class="menu-price">12,000 - 15,000 - 16,000 MMK</span></li>
-                        <li><span>Cocoa(imported from France)</span> <span class="menu-price">12,000 - 14,000 - 16,000 MMK</span></li>
-                        <li><span>Matcha Latte</span> <span class="menu-price">12,000 - 14,000 - 16,000 MMK</span></li>
-                        <li><span>Coffee Cold Brew (8hour)</span> <span class="menu-price">20,000 MMK</span></li>
-                        <li><span>Drip Coffee</span> <span class="menu-price">20,000 MMK</span></li>
-                        <li><span>BomBom Cafe</span> <span class="menu-price">11,000 MMK</span></li>
-                        <li><span>Flat White</span> <span class="menu-price">9,000 MMK</span></li>
-                    </ul>
-                </div>
-                <!-- MALUCA TEA  -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mt-6 mb-3">☕ Barista - Coffee & Tea</h4>
-                    <ul class="menu-list">
-                        <li><span>Honey Lemon Tea(Glass)</span> <span class="menu-price">11,000 - 12,000 MMK</span></li>
-                        <li><span>Lemon Tea (Hot/Pot)</span> <span class="menu-price">6,000 - 7,000 MMK</span></li>
-                        <li><span>jasmine Tea (Hot/Pot)</span> <span class="menu-price">6,000 MMK</span></li>
-                        <li><span>Green Tea (Hot/Pot)</span> <span class="menu-price">6,000 MMK</span></li>
-                    </ul>
-                </div>
-                  <!-- Summer Coffee  -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mt-6 mb-3">☕ Barista - Coffee & Tea</h4>
-                    <ul class="menu-list">
-                        <li><span>Cinnamon Latte</span> <span class="menu-price">13,000 - 15,000 MMK</span></li>
-                        <li><span>French Press</span> <span class="menu-price">13,000 - 15,000 MMK</span></li>
-                        <li><span>Shakerto</span> <span class="menu-price">18,000 MMK</span></li>
-                        <li><span>Espresso Tonic</span> <span class="menu-price">15,000 MMK</span></li>
-                        <li><span>Cold Brew Tonic</span> <span class="menu-price">22,000 MMK</span></li>
-                        <li><span>Matcha Espresso Fusion</span> <span class="menu-price">25,000 MMK</span></li>
-                        <li><span>Sunkist Presso</span> <span class="menu-price">20,000 MMK</span></li>
-                    </ul>
-                </div>
-                <!-- Bakery Section -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mt-6 mb-3">🥐 Bakery - Fresh Pastries</h4>
-                    <ul class="menu-list">
-                        <li><span>Croissant (Plain/Almond/Chocolate)</span> <span class="menu-price">4,000 - 5,000 - 6,000 MMK</span></li>
-                        <li><span>Fresh Bread (Baguette/Whole Wheat)</span> <span class="menu-price">3,000 - 4,000 MMK</span></li>
-                        <li><span>Pain au Chocolat</span> <span class="menu-price">5,000 MMK</span></li>
-                        <li><span>Danish Pastry</span> <span class="menu-price">5,000 MMK</span></li>
-                        <li><span>Cinnamon Roll</span> <span class="menu-price">5,000 MMK</span></li>
-                        <li><span>Muffin (Blueberry/Chocolate)</span> <span class="menu-price">5,000 MMK</span></li>
-                        <li><span>Scones with Jam & Cream</span> <span class="menu-price">6,000 MMK</span></li>
-                    </ul>
-                </div>
-                
-                <!-- Fresh Juices Section -->
-                <div class="submenu">
-                    <h4 class="text-lg font-semibold mt-6 mb-3">🥤 Fresh Juices & Smoothies</h4>
-                    <ul class="menu-list">
-                        <li><span>Fresh Papaya & Lime Juice</span> <span class="menu-price">7,000 MMK</span></li>
-                        <li><span>Orange Juice</span> <span class="menu-price">5,000 MMK</span></li>
-                        <li><span>Watermelon Juice</span> <span class="menu-price">5,000 MMK</span></li>
-                        <li><span>Avocado Smoothie</span> <span class="menu-price">8,000 MMK</span></li>
-                        <li><span>Mango Smoothie</span> <span class="menu-price">7,000 MMK</span></li>
-                        <li><span>Berry Smoothie</span> <span class="menu-price">8,000 MMK</span></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Desserts Section -->
-            <div id="desserts" class="menu-block">
-                <h3 class="menu-title">🍰 Desserts</h3>
-                <ul class="menu-list">
-                    <li><span>Carrot Cake</span> <span class="menu-price">12,000 MMK</span></li>
-                    <li><span>Cheese Cake</span> <span class="menu-price">16,000 MMK</span></li>
-                    <li><span>Egg Pudding</span> <span class="menu-price">7,000 MMK</span></li>
-                    <li><span>Panna Cotta</span> <span class="menu-price">12,000 MMK</span></li>
-                    <li><span>Seasonal Mousse</span> <span class="menu-price">9,000 MMK</span></li>
-                    <li><span>Fruit Platter</span> <span class="menu-price">12,000 MMK</span></li>
-                    <li><span>Red Velvet Cake</span> <span class="menu-price">15,000 MMK</span></li>
-                    <li><span>Burnt Cheese Cake</span> <span class="menu-price">15,000 MMK</span></li>
-                </ul>
-            </div>
-            
-            <!-- Menu Remark -->
-            <div class="mt-8 p-4 bg-amber-50 rounded-lg border border-amber-200">
-                <p class="text-sm text-amber-800"><strong>Remark:</strong> Prices exclude government tax of 5% + service charge of 10%.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ambiance Section -->
-    <section id="ambiance" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-amber-800 text-center mb-4 section-title">Our Ambiance</h2>
-            <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Experience the perfect blend of elegance and comfort in our beautifully designed space</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="ambiance-card bg-white rounded-xl shadow-lg overflow-hidden classic-border">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Elegant Dining Room" class="w-full h-56 object-cover" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgNTAwIDIyNCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyMjQiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5EaW5pbmcgUm9vbTwvdGV4dD48L3N2Zz4=';">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Elegant Dining Room</h3>
-                        <p class="text-gray-600">Our sophisticated dining area offers a perfect setting for special occasions and intimate gatherings.</p>
-                    </div>
-                </div>
-                
-                <div class="ambiance-card bg-white rounded-xl shadow-lg overflow-hidden classic-border">
-                    <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mountain View Terrace" class="w-full h-56 object-cover" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgNTAwIDIyNCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyMjQiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5UZXJyYWNlPC90ZXh0Pjwvc3ZnPg==';">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Mountain View Terrace</h3>
-                        <p class="text-gray-600">Enjoy breathtaking views of the Shan mountains from our spacious outdoor terrace.</p>
-                    </div>
-                </div>
-                
-                <div class="ambiance-card bg-white rounded-xl shadow-lg overflow-hidden classic-border">
-                    <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cozy Lounge Bar" class="w-full h-56 object-cover" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgNTAwIDIyNCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyMjQiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5Mb3VuZ2UgQmFyPC90ZXh0Pjwvc3ZnPg==';">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Cozy Lounge Bar</h3>
-                        <p class="text-gray-600">Relax in our comfortable lounge area with a selection of fine wines and craft cocktails.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-amber-800 text-center mb-6 section-title">About Maluca Villa</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Restaurant Interior" class="rounded-xl shadow-lg mb-4 classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgNTAwIDIyNCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyMjQiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5JbnRlcmlvcjwvdGV4dD48L3N2Zz4=';">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Restaurant Exterior" class="rounded-xl shadow-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgNTAwIDIyNCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyMjQiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5FeHRlcmlvcjwvdGV4dD48L3N2Zz4=';">
-                    </div>
-                    <div>
-                        <p class="text-gray-700 mb-4">
-                            Nestled in the picturesque hill station of Kalaw, Maluca Villa offers a unique dining experience that combines the best of European, Danu, and Burmese cuisines. Our restaurant is renowned for its warm hospitality and breathtaking mountain views.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            Founded in 2015, Maluca Villa has become a culinary destination for both locals and travelers seeking authentic flavors in an elegant setting. Our beautifully designed space features traditional Myanmar craftsmanship blended with modern comforts.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            Whether you're celebrating a special occasion or simply enjoying a meal with loved ones, our attentive staff and serene ambiance create the perfect atmosphere for memorable dining experiences.
-                        </p>
-                        <div class="flex items-center mt-6">
-                            <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-award text-amber-700 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-amber-800">Award-Winning Ambiance</h4>
-                                <p class="text-gray-600">Recognized for exceptional dining atmosphere</p>
-                            </div>
-                        </div>
-                    </div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Maluca Villa</h2>
+                <p>Discover our story rooted in the natural beauty and culture of Kalaw</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Brand Story</h3>
+                    <p>Maluca Villa is more than just a destination; it's a celebration of the natural beauty and cultural richness of Kalaw. Our brand spirit focuses on the people of Kalaw: humble, loving, and kind.</p>
+                    <p>We believe in creating a pure connection with the warmth of human nature and the freshness of mother nature. Our products feature 100% natural ingredients ethically sourced from the Kalaw region, handmade production, international standard quality, and acid-free recyclable packaging.</p>
+                    <p>At Maluca Villa, we're committed to building a positive and passionate team with family spirit, the same value we bring to our relationship with you, our guests.</p>
+                    <a href="#contact" class="btn">Visit Us Today</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Maluca Villa">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-amber-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-amber-800 text-center mb-4 section-title">What Our Guests Say</h2>
-            <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Reviews from our valued customers</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="testimonial-card rounded-xl shadow-lg p-6 classic-border">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxMnB4Ij5FbW1hPC90ZXh0Pjwvc3ZnPg==';">
-                        <div>
-                            <h4 class="font-bold text-amber-800">Emma Thompson</h4>
-                            <div class="text-amber-500">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"The ambiance at Maluca Villa is absolutely stunning! The mountain views from the terrace are breathtaking. A must-visit when in Kalaw."</p>
-                </div>
+            <!-- Founder Story Section -->
+            <div class="founder-story">
+                <h3>Founder's Story & Go Green Initiative</h3>
+                <p>Founded in 2018 in Kalaw, Maluca Villa started as a passion project to create Go Green experiences. Our journey began with a simple vision: to share the beauty of sustainable living with our community.</p>
                 
-                <div class="testimonial-card rounded-xl shadow-lg p-6 classic-border">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxMnB4Ij5EYXZpZDwvdGV4dD48L3N2Zz4=';">
-                        <div>
-                            <h4 class="font-bold text-amber-800">David Chen</h4>
-                            <div class="text-amber-500">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"The interior design is exquisite! Perfect blend of traditional Myanmar elements with modern elegance. Service was exceptional!"</p>
-                </div>
+                <h4>Why Kalaw?</h4>
+                <p>We chose Kalaw because:</p>
+                <ul>
+                    <li>Shan State locals cultivate trees, plants, and crops abundantly</li>
+                    <li>The fresh natural environment allows people to thrive in harmony with nature</li>
+                    <li>Living surrounded by green forests that produce oxygen improves health and longevity</li>
+                    <li>We believe in reducing environmental impact and improving our lifestyle</li>
+                </ul>
                 
-                <div class="testimonial-card rounded-xl shadow-lg p-6 classic-border">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxMnB4Ij5Tb3BoaWE8L3RleHQ+PC9zdmc+';">
-                        <div>
-                            <h4 class="font-bold text-amber-800">Sophia Williams</h4>
-                            <div class="text-amber-500">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                <h4>Our Commitment to Sustainability</h4>
+                <p>We started practicing the three R's: <strong>Reduce – Reuse – Recycle</strong> to address global environmental challenges including:</p>
+                <ul>
+                    <li>Global warming and climate change</li>
+                    <li>Ocean and land pollution</li>
+                    <li>Waste disposal problems</li>
+                    <li>Excessive energy consumption leading to carbon emissions</li>
+                    <li>Loss of biodiversity</li>
+                </ul>
+                
+                <h4>How We Go Green</h4>
+                <p><strong>At home:</strong> Reduce energy consumption, switch to solar power</p>
+                <p><strong>In our restaurant:</strong> Replace plastic with sustainable alternatives like paper bags, brown paper, banana leaves, natural fabrics, and reusable containers</p>
+                <p><strong>Individual actions:</strong> Use reusable cups, plates, and utensils instead of disposable plastics</p>
+                
+                <h4>Our Initiatives</h4>
+                <p>We encourage everyone to:</p>
+                <ul>
+                    <li>Form groups for tree planting activities</li>
+                    <li>Organize "No Plastic Week" campaigns</li>
+                    <li>Install recycling bins throughout our facilities</li>
+                    <li>Adopt new technologies like smart home systems and electric vehicles</li>
+                    <li>Start small - even tiny changes can lead to big transformations</li>
+                    <li>Share the message with others to multiply our impact</li>
+                </ul>
+                
+                <p>By starting today, we can all enjoy fresh air, good health, and a sustainable future. Remember: <em>"If you can't do much, starting small can lead to big changes. Share the message with others."</em></p>
+            </div>
+            
+            <!-- Green Initiative Highlight -->
+            <div class="green-initiative">
+                <h3>Join Our Green Movement</h3>
+                <p>At Maluca Villa, we're committed to preserving Kalaw's natural beauty for future generations. Every small action counts toward a greener planet.</p>
+                <p>Through our sustainable practices and community engagement, we're creating a model for eco-tourism that respects both people and nature.</p>
+                <a href="#contact" class="btn">Get Involved</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Kalaw Section -->
+    <section id="kalaw" class="kalaw">
+        <div class="container">
+            <div class="section-title">
+                <h2>Discover Kalaw</h2>
+                <p>Explore the charming hill station known for its cool climate and natural beauty</p>
+            </div>
+            <div class="kalaw-content">
+                <div class="kalaw-text">
+                    <h3>The Heart of Shan State</h3>
+                    <p>Kalaw is a picturesque hill town in the Shan State of Myanmar, situated at an elevation of 1,320 meters above sea level. Known for its cool climate throughout the year, it was once a popular British colonial retreat and remains a favorite destination for those seeking respite from the heat.</p>
+                    <p>The town is surrounded by lush pine forests, terraced fields, and colorful flower gardens, creating a serene atmosphere that captivates visitors. Kalaw's unique blend of natural beauty, cultural diversity, and colonial charm makes it a must-visit destination in Myanmar.</p>
+                    <p>What makes Kalaw truly special is its vibrant multicultural community, home to various ethnic groups including the Shan, Palaung, Pa-O, and Danu people. This diversity is reflected in the town's rich cultural tapestry, traditional festivals, and warm hospitality.</p>
+                    <a href="#attractions" class="btn">Explore Attractions</a>
+                </div>
+                <div class="kalaw-image">
+                    <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80" alt="Kalaw Town View">
+                </div>
+            </div>
+            
+            <!-- Attractions Section -->
+            <div id="attractions" class="attractions">
+                <h3>Top Attractions in Kalaw</h3>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Kalaw Market">
+                        </div>
+                        <div class="attraction-content">
+                            <h4>Kalaw Market</h4>
+                            <p>Experience the vibrant local market where various ethnic groups gather to sell fresh produce, traditional crafts, and local delicacies. A perfect place to immerse yourself in the local culture.</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"The lounge bar is perfect for evening drinks. The atmosphere is so relaxing and the decor is beautiful. Will definitely return!"</p>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Green Hill Valley">
+                        </div>
+                        <div class="attraction-content">
+                            <h4>Green Hill Valley</h4>
+                            <p>Stunning valley views with terraced fields and traditional villages. Perfect for hiking and photography enthusiasts looking to capture the beauty of rural Myanmar.</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Shan Villages">
+                        </div>
+                        <div class="attraction-content">
+                            <h4>Ethnic Shan Villages</h4>
+                            <p>Visit nearby Shan villages to experience traditional lifestyles, observe local crafts, and interact with friendly villagers who are proud to share their cultural heritage.</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Colonial Buildings">
+                        </div>
+                        <div class="attraction-content">
+                            <h4>Colonial Architecture</h4>
+                            <p>Explore charming British colonial buildings that stand as a reminder of Kalaw's history as a hill station during colonial times. Each building tells a story of the past.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Experience the best of dining, wellness, and nature at Maluca Villa</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Restaurant & Bar">
+                    <div class="service-card-content">
+                        <h3>Restaurant & Bar</h3>
+                        <p>Savor our popular food including Traditional Danu & Shan Kitchen Food, European dishes like Bacon Salad, refreshing cocktails, and barista coffee with sweet desserts.</p>
+                        <a href="#menu" class="btn">View Menu</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Healthcare Show Room">
+                    <div class="service-card-content">
+                        <h3>Healthcare Show Room</h3>
+                        <p>Explore our range of healthy food and natural products made with 100% natural ingredients ethically sourced from the Kalaw region.</p>
+                        <a href="#products" class="btn">View Products</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Camping Tent">
+                    <div class="service-card-content">
+                        <h3>Camping Tent Experience</h3>
+                        <p>Enjoy our comfortable camping tents (210×240×130 cm, accommodating 4-5 people) with blankets, beds, and more in the beautiful natural surroundings of Kalaw.</p>
+                        <a href="#contact" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1476224203421-7ac9942a8aa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Maluca Market">
+                    <div class="service-card-content">
+                        <h3>Maluca Market</h3>
+                        <p>Join our weekend market featuring local products, traditional dances, photo booths, and special cultural activities that celebrate the heritage of Kalaw.</p>
+                        <a href="#events" class="btn">View Events</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Souvenir Shop">
+                    <div class="service-card-content">
+                        <h3>Souvenir Shop</h3>
+                        <p>Take home a piece of Kalaw with our selection of Maluca Natural Products, paintings, and other locally crafted souvenirs.</p>
+                        <a href="#contact" class="btn">Visit Shop</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="CSR Program">
+                    <div class="service-card-content">
+                        <h3>CSR Program</h3>
+                        <p>Join us in our commitment to environmental sustainability through our recycling initiatives and collaborations with local organizations.</p>
+                        <a href="#contact" class="btn">Get Involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Coffee Section -->
+    <section id="coffee" class="coffee">
+        <div class="container">
+            <div class="section-title">
+                <h2>Artisan Coffee Experience</h2>
+                <p>Discover our specialty coffee crafted with passion and local expertise</p>
+            </div>
+            
+            <div class="coffee-intro">
+                <div class="coffee-text">
+                    <h3>Kalaw's Coffee Heritage</h3>
+                    <p>Nestled in the highlands of Shan State, Kalaw has become renowned for its exceptional coffee cultivation. At Maluca Villa, we celebrate this rich heritage by sourcing the finest local beans and crafting each cup with precision and care.</p>
+                    <p>Our coffee journey begins with carefully selected beans from local plantations, where the cool climate and fertile soil create the perfect growing conditions. We work directly with farmers who share our commitment to sustainable and ethical practices.</p>
+                    <p>Each cup of Maluca Villa coffee tells a story of tradition, quality, and the unique terroir of Kalaw. From bean to cup, we ensure that every step honors the natural environment and the skilled hands that cultivate these precious beans.</p>
+                    <a href="#coffee-menu" class="btn">Explore Our Coffee Menu</a>
+                </div>
+                <div class="coffee-image">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80" alt="Coffee Beans">
+                </div>
+            </div>
+            
+            <div class="coffee-process">
+                <h3 class="process-title">From Farm to Cup: Our Coffee Journey</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="step-title">Sustainable Farming</h4>
+                        <p class="step-description">Partnering with local farmers who use eco-friendly cultivation methods to grow premium coffee beans.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4 class="step-title">Artisan Roasting</h4>
+                        <p class="step-description">Small-batch roasting in-house to bring out the unique flavors and aromas of each bean variety.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-mortar-pestle"></i>
+                        </div>
+                        <h4 class="step-title">Precision Grinding</h4>
+                        <p class="step-description">Grinding fresh to order to preserve the delicate flavors and essential oils.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h4 class="step-title">Expert Brewing</h4>
+                        <p class="step-description">Crafted by our skilled baristas using traditional and modern brewing techniques.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="coffee-menu" class="coffee-menu">
+                <div class="coffee-item">
+                    <div class="coffee-badge">Signature</div>
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Kalaw Single Origin">
+                    </div>
+                    <div class="coffee-content">
+                        <h3 class="coffee-title">Kalaw Single Origin</h3>
+                        <p class="coffee-description">Our signature single-origin coffee featuring beans exclusively from Kalaw plantations. Notes of chocolate, caramel, and subtle floral undertones create a perfectly balanced cup.</p>
+                        <div class="coffee-features">
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Medium Roast</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>100% Arabica</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Altitude: 1,300m</span>
+                            </div>
+                        </div>
+                        <div class="coffee-footer">
+                            <div class="coffee-price"></div>
+                            <button class="coffee-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coffee-item">
+                    <div class="coffee-badge">Popular</div>
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Shan Highlands Blend">
+                    </div>
+                    <div class="coffee-content">
+                        <h3 class="coffee-title">Shan Highlands Blend</h3>
+                        <p class="coffee-description">A carefully crafted blend of beans from various Shan State regions. This complex coffee features bright acidity with hints of citrus and a smooth, lingering finish.</p>
+                        <div class="coffee-features">
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Medium-Dark Roast</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Multi-Origin</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Full Body</span>
+                            </div>
+                        </div>
+                        <div class="coffee-footer">
+                            <div class="coffee-price"></div>
+                            <button class="coffee-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coffee-item">
+                    <div class="coffee-badge">Specialty</div>
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Ethiopian Yirgacheffe">
+                    </div>
+                    <div class="coffee-content">
+                        <h3 class="coffee-title">Ethiopian Yirgacheffe</h3>
+                        <p class="coffee-description">Imported premium beans from the birthplace of coffee. Bright, wine-like acidity with distinct blueberry and floral notes that dance on the palate.</p>
+                        <div class="coffee-features">
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Light Roast</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Washed Process</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Floral & Fruity</span>
+                            </div>
+                        </div>
+                        <div class="coffee-footer">
+                            <div class="coffee-price"></div>
+                            <button class="coffee-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coffee-item">
+                    <div class="coffee-badge">New</div>
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Cold Brew Special">
+                    </div>
+                    <div class="coffee-content">
+                        <h3 class="coffee-title">Cold Brew Special</h3>
+                        <p class="coffee-description">Our signature cold brew steeped for 24 hours to extract the smoothest flavors with low acidity. Served over ice with a hint of local honey.</p>
+                        <div class="coffee-features">
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>24-Hour Steep</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Low Acidity</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Refreshing</span>
+                            </div>
+                        </div>
+                        <div class="coffee-footer">
+                            <div class="coffee-price"></div>
+                            <button class="coffee-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coffee-item">
+                    <div class="coffee-badge">Decaf</div>
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Swiss Water Decaf">
+                    </div>
+                    <div class="coffee-content">
+                        <h3 class="coffee-title">Swiss Water Decaf</h3>
+                        <p class="coffee-description">Premium decaffeinated coffee processed using the chemical-free Swiss Water method. All the flavor, none of the caffeine.</p>
+                        <div class="coffee-features">
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Chemical-Free</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>99.9% Caffeine-Free</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Full Flavor</span>
+                            </div>
+                        </div>
+                        <div class="coffee-footer">
+                            <button class="coffee-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coffee-item">
+                    <div class="coffee-badge">Seasonal</div>
+                    <div class="coffee-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Monsoon Special">
+                    </div>
+                    <div class="coffee-content">
+                        <h3 class="coffee-title">Monsoon Special</h3>
+                        <p class="coffee-description">A seasonal blend featuring beans harvested during the monsoon season. Rich, earthy flavors with hints of spice and dark chocolate.</p>
+                        <div class="coffee-features">
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Limited Edition</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Dark Roast</span>
+                            </div>
+                            <div class="coffee-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Earthy Notes</span>
+                            </div>
+                        </div>
+                        <div class="coffee-footer">
+                            <div class="coffee-price"></div>
+                            <button class="coffee-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Menu</h2>
+                <p>A culinary journey featuring local traditions and international favorites</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-tab="food">Food</button>
+                <button class="menu-tab" data-tab="drinks">Drinks</button>
+                <button class="menu-tab" data-tab="set-menus">Set Menus</button>
+            </div>
+            <div class="menu-items" id="food-items">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Traditional Danu Cuisine">
+                    <div class="menu-item-content">
+                        <h4>Traditional Danu Cuisine</h4>
+                        <p>Authentic flavors from the Danu people of Kalaw, prepared with traditional methods and local ingredients.</p>                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Shan Kitchen Food">
+                    <div class="menu-item-content">
+                        <h4>Shan Kitchen Food</h4>
+                        <p>Delicious Shan specialties featuring aromatic herbs and spices unique to the region.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1540189549447-b6d2ea406479?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Bacon Salad">
+                    <div class="menu-item-content">
+                        <h4>Bacon Salad</h4>
+                        <p>Fresh garden greens topped with crispy bacon and our special house dressing.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1552611025-726c4bfb23e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Thai Cuisine">
+                    <div class="menu-item-content">
+                        <h4>Thai Cuisine</h4>
+                        <p>Popular Thai dishes with a perfect balance of sweet, sour, salty, and spicy flavors.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="European Food">
+                    <div class="menu-item-content">
+                        <h4>European Food</h4>
+                        <p>A selection of classic European dishes prepared with a local twist using fresh ingredients.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Healthy Food">
+                    <div class="menu-item-content">
+                        <h4>Healthy Food</h4>
+                        <p>Nutritious options made with organic ingredients from our local partners.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items" id="drinks-items" style="display: none;">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1622597467836-f3c7ca3b4c25?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Fresh Juice">
+                    <div class="menu-item-content">
+                        <h4>Fresh Juice</h4>
+                        <p>100% natural fruit juices made from locally sourced fruits, no added sugar or preservatives.</p>                        <div class="price">From 2,500 Ks</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1514362535861-d2141c40858d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Cocktail">
+                    <div class="menu-item-content">
+                        <h4>Cocktail</h4>
+                        <p>Signature cocktails crafted by our expert mixologists using local spirits and fresh ingredients.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Barista Coffee">
+                    <div class="menu-item-content">
+                        <h4>Barista Coffee</h4>
+                        <p>Premium coffee beans roasted to perfection and brewed by our skilled baristas.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Local Tea">
+                    <div class="menu-item-content">
+                        <h4>Local Tea</h4>
+                        <p>Traditional Burmese teas and herbal infusions sourced from local plantations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items" id="set-menus-items" style="display: none;">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Danu Set Menu">
+                    <div class="menu-item-content">
+                        <h4>Danu Set Menu</h4>
+                        <p>Traditional Danu dishes including Deep Fried Tofu, Water Mustard Salad, Danu Red Bean Soup, Beef & Tea Leaf Curry, and Fried Banana with honey.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="European Set Menu">
+                    <div class="menu-item-content">
+                        <h4>European Set Menu</h4>
+                        <p>Cheese ball, Spring roll, Avocado Salad, Pumpkin Soup, Pan-Grilled Chicken or Mushroom ravioli, and Chocolate mousse.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Chinese Set Menu">
+                    <div class="menu-item-content">
+                        <h4>Chinese Set Menu</h4>
+                        <p>Fried Wonton, Cucumber salad, Mix vegetable Soup, Sweet & Sour Chicken, Chicken Gong Bao, and Chinese Tea.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Chinese Seafood Set Menu">
+                    <div class="menu-item-content">
+                        <h4>Chinese Seafood Set Menu</h4>
+                        <p>Fried Vegetable Spring Roll, Mixed vegetable Soup, Prawn Curry or Sweet & Sour Fish, and Chinese Tea.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Natural Products Section -->
+    <section id="products" class="natural-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Natural Products</h2>
+                <p>Discover our range of healthcare products made with 100% natural ingredients</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Herbal Face Cream">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Herbal Face Cream</h3>
+                        <p class="product-description">Made with wild herbs from Kalaw mountains, this cream nourishes and protects your skin naturally.</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>100% Natural Ingredients</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>No Chemical Additives</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Eco-Friendly Packaging</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="product-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Essential Oil Blend">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Essential Oil Blend</h3>
+                        <p class="product-description">A unique blend of essential oils from local plants that promotes relaxation and mental clarity.</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Pure Plant Extracts</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Aromatherapy Grade</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Hand-processed</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="product-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge">Organic</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Herbal Tea Collection">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Herbal Tea Collection</h3>
+                        <p class="product-description">A selection of traditional herbal teas made from plants grown in our Kalaw gardens.</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Locally Sourced Herbs</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>No Preservatives</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Health Benefits</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="product-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Natural Soap Set">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Natural Soap Set</h3>
+                        <p class="product-description">Handcrafted soaps made with natural oils and botanicals from the Kalaw region.</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Plant-based Oils</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>No Synthetic Fragrances</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Biodegradable</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="product-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge">Limited</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Honey Infused Balm">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Honey Infused Balm</h3>
+                        <p class="product-description">A healing balm made with pure Kalaw honey and medicinal herbs for skin repair.</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Raw Honey</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Medicinal Herbs</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Multi-purpose Use</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="product-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge">Eco-Friendly</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Bamboo Fiber Products">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Bamboo Fiber Products</h3>
+                        <p class="product-description">Sustainable household items made from locally harvested bamboo fibers.</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Sustainable Material</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Handmade Locally</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Zero Waste</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <button class="product-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-amber-800 text-center mb-10 section-title">Restaurant Gallery</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Elegant Dining Area" class="gallery-img w-full h-64 object-cover rounded-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgNTAwIDI1NiIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTYiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5EaW5pbmcgQXJlYTwvdGV4dD48L3N2Zz4=';">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                        <span class="text-white font-bold">Elegant Dining Area</span>
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+                <p>Explore the beautiful surroundings and facilities at Maluca Villa</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Maluca Villa">
+                    <div class="gallery-caption">
+                        <h4>Maluca Villa</h4>
+                        <p>Beautiful villa with natural surroundings</p>
                     </div>
                 </div>
-                
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mountain View Terrace" class="gallery-img w-full h-64 object-cover rounded-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgNTAwIDI1NiIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTYiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5UZXJyYWNlPC90ZXh0Pjwvc3ZnPg==';">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                        <span class="text-white font-bold">Mountain View Terrace</span>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Camping Tents">
+                    <div class="gallery-caption">
+                        <h4>Camping Tents</h4>
+                        <p>Comfortable tents in natural setting</p>
                     </div>
                 </div>
-                
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cozy Lounge Bar" class="gallery-img w-full h-64 object-cover rounded-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgNTAwIDI1NiIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTYiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5Mb3VuZ2UgQmFyPC90ZXh0Pjwvc3ZnPg==';">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                        <span class="text-white font-bold">Cozy Lounge Bar</span>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Natural Surroundings">
+                    <div class="gallery-caption">
+                        <h4>Natural Surroundings</h4>
+                        <p>Lush greenery and peaceful environment</p>
                     </div>
                 </div>
-                
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Restaurant Entrance" class="gallery-img w-full h-64 object-cover rounded-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgNTAwIDI1NiIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTYiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5FbnRyYW5jZTwvdGV4dD48L3N2Zz4=';">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                        <span class="text-white font-bold">Restaurant Entrance</span>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Restaurant Interior">
+                    <div class="gallery-caption">
+                        <h4>Restaurant Interior</h4>
+                        <p>Elegant dining space with natural elements</p>
                     </div>
                 </div>
-                
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Beautiful Interior" class="gallery-img w-full h-64 object-cover rounded-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgNTAwIDI1NiIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTYiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5JbnRlcmlvcjwvdGV4dD48L3N2Zz4=';">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                        <span class="text-white font-bold">Beautiful Interior</span>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544144433-d1b24bd10ad5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Wine Tasting Bar">
+                    <div class="gallery-caption">
+                        <h4>Wine Tasting Bar</h4>
+                        <p>Cozy bar with selection of fine wines</p>
                     </div>
                 </div>
-                
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Outdoor Dining" class="gallery-img w-full h-64 object-cover rounded-lg classic-border" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgNTAwIDI1NiIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTYiIGZpbGw9IiNlNWU3ZWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiNzI4MCIgZm9udC1zaXplPSIxNHB4Ij5PdXRkb29yIERpbmluZzwvdGV4dD48L3N2Zz4=';">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                        <span class="text-white font-bold">Outdoor Dining</span>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1476224203421-7ac9942a8aa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Market Day">
+                    <div class="gallery-caption">
+                        <h4>Market Day</h4>
+                        <p>Vibrant local market with cultural activities</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Natural Products">
+                    <div class="gallery-caption">
+                        <h4>Natural Products</h4>
+                        <p>Healthcare products made with natural ingredients</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Souvenir Shop">
+                    <div class="gallery-caption">
+                        <h4>Souvenir Shop</h4>
+                        <p>Local crafts and unique souvenirs</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>Join us for special cultural festivals and activities at Maluca Villa</p>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Cultural Festival">
+                </div>
+                <div class="event-content">
+                    <div class="event-date">March 27-29, 2023</div>
+                    <h3>The Maluca MARKET Cultural Festival Edition</h3>
+                    <p>Experience the rich cultural heritage of Kalaw at our special festival edition of Maluca Market. Enjoy traditional dances, local crafts, authentic cuisine, and much more in a celebration of our community's traditions.</p>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>10AM - 6PM</span>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kalaw Maluca Villa</span>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span>2,500 Ks (1 day pass)</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Myanmar traditional attire welcome</span>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-leaf"></i>
+                            <span>Zero waste event</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn">Book Tickets</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="https://images.unsplash.com/photo-1476224203421-7ac9942a8aa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Weekend Market">
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Every Saturday & Sunday</div>
+                    <h3>Maluca Weekend Market</h3>
+                    <p>Join us every weekend for our regular market featuring local products, food stalls, and special activities. It's the perfect place to experience local culture, shop for unique souvenirs, and enjoy delicious food in a vibrant atmosphere.</p>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>10AM - 6PM</span>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kalaw Maluca Villa</span>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Free entry</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <i class="fas fa-music"></i>
+                            <span>Live music performances</span>
+                        </div>
+                        <div class="event-detail">
+                            <i class="fas fa-palette"></i>
+                            <span>Local artisan showcases</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-amber-800 text-center mb-6 section-title">Contact Us</h2>
-            <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">We'd love to hear from you. For reservations, please call us directly.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 classic-border">
-                        <h3 class="text-2xl font-bold text-amber-800 mb-6">Get in Touch</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Address</h4>
-                                    <p class="text-gray-600">No 45, 3rd Quarter, East Bogone Road, Kalaw, Shan State, Myanmar</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Phone</h4>
-                                    <p class="text-gray-600">+95 9 5199 476</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Email</h4>
-                                    <p class="text-gray-600">info@malucavilla.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-clock text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Opening Hours</h4>
-                                    <p class="text-gray-600">Monday: Closed</p>
-                                    <p class="text-gray-600">Tuesday - Sunday: 9:30 AM - 8:30 PM</p>
-                                </div>
-                            </div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for reservations, inquiries, or more information</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Visit Maluca Villa</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>No.45 (A) Easter Bo Gone, 3rd Quarter<br>Kalaw Township, Shan State, Myanmar</p>
                         </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-bold text-gray-800 mb-3">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="classic-button w-10 h-10 rounded-full flex items-center justify-center">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="classic-button w-10 h-10 rounded-full flex items-center justify-center">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="classic-button w-10 h-10 rounded-full flex items-center justify-center">
-                                    <i class="fab fa-tripadvisor"></i>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>09 - 978283995<br>09 - 5199476</p>
                         </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>jin@vandalivingmall.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Open Daily: 10:00am to 10:00pm</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
-                <div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 classic-border">
-                        <h3 class="text-2xl font-bold text-amber-800 mb-6">Send a Message</h3>
-                        <form id="contactForm">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 mb-2">Name</label>
-                                <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label for="message" class="block text-gray-700 mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="w-full classic-button py-3 rounded-lg font-medium">Send Message</button>
-                        </form>
-                    </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
-    <footer class="footer-bg text-gray-400 py-10">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center space-x-3 mb-2">
-                        <div class="bg-amber-700 text-white rounded-full p-2"><i class="fas fa-utensils text-xl"></i></div>
-                        <h1 class="text-xl font-bold text-white">Maluca Villa</h1>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Maluca Villa</h3>
+                    <p>Experience natural dining, wellness, and cultural activities at Maluca Villa in Kalaw. Our commitment to sustainability and local culture creates a unique experience for all our guests.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
-                    <p class="text-sm">Fine Dining in the Heart of Kalaw</p>
                 </div>
-                
-                <div class="text-center md:text-right">
-                    <p class="mb-2">&copy; 2025 Maluca Villa. All Rights Reserved.</p>
-                    <p>www.malucavillakalaw.com</p>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#kalaw">Kalaw</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#coffee">Coffee</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Restaurant & Bar</a></li>
+                        <li><a href="#">Healthcare Show Room</a></li>
+                        <li><a href="#">Camping Tent</a></li>
+                        <li><a href="#">Maluca Market</a></li>
+                        <li><a href="#">Souvenir Shop</a></li>
+                        <li><a href="#">CSR Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>No.45 (A) Easter Bo Gone<br>Kalaw Township, Shan State</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>09 - 978283995<br>09 - 5199476</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>jin@vandalivingmall.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p>Open Daily: 10:00am to 10:00pm</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-                <p>Designed with ❤️ for Thura</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Maluca Villa. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--secondary-color);"></i> for nature lovers</p>
             </div>
         </div>
     </footer>
-
     <script>
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
-                document.getElementById('mobileMenu').classList.add('hidden');
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        // Menu Tabs
+        const menuTabs = document.querySelectorAll('.menu-tab');
+        const foodItems = document.getElementById('food-items');
+        const drinksItems = document.getElementById('drinks-items');
+        const setMenusItems = document.getElementById('set-menus-items');
+        menuTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                menuTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all menu items
+                foodItems.style.display = 'none';
+                drinksItems.style.display = 'none';
+                setMenusItems.style.display = 'none';
+                
+                // Show selected menu items
+                if (this.dataset.tab === 'food') {
+                    foodItems.style.display = 'grid';
+                } else if (this.dataset.tab === 'drinks') {
+                    drinksItems.style.display = 'grid';
+                } else if (this.dataset.tab === 'set-menus') {
+                    setMenusItems.style.display = 'grid';
+                }
             });
         });
-        
-        document.getElementById('contactForm').addEventListener('submit', function(e){
+        // Product Buttons
+        document.querySelectorAll('.product-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.closest('.product-card').querySelector('.product-title').textContent;
+                alert(`Thank you for your interest in ${productName}! Please contact us to purchase this product.`);
+            });
+        });
+        // Coffee Buttons
+        document.querySelectorAll('.coffee-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const coffeeName = this.closest('.coffee-item').querySelector('.coffee-title').textContent;
+                alert(`Thank you for your interest in ${coffeeName}! Please contact us to place your order.`);
+            });
+        });
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form values
@@ -866,30 +2209,36 @@
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // Simple validation
-            if(name && email && subject && message) {
-                // Show success message
-                const formContainer = this.parentElement;
-                formContainer.innerHTML = `
-                    <div class="text-center py-10">
-                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
-                            <i class="fas fa-check text-green-500 text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-amber-800 mb-2">Thank You, ${name}!</h3>
-                        <p class="text-gray-600 mb-4">Your message has been sent successfully. We'll get back to you soon.</p>
-                        <button onclick="location.reload()" class="classic-button px-6 py-3 rounded-full font-medium">Send Another Message</button>
-                    </div>
-                `;
-                
-                // In a real application, you would send the form data to a server here
-                console.log({name, email, subject, message});
-            }
+            // Here you would normally send the form data to a server
+            // For this example, we'll just show a success message
+            alert('Thank you for your message, ' + name + '! We will get back to you soon.');
+            
+            // Reset the form
+            this.reset();
         });
-        
-        // Menu section scroll function
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const nav = document.querySelector('nav ul');
+                    if (window.innerWidth <= 768 && nav.style.display === 'flex') {
+                        nav.style.display = 'none';
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
