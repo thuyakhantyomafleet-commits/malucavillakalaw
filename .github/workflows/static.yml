@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maluca Villa - Restaurant, Bar & Natural Experience</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2d6a4f;
+            --secondary: #52b788;
+            --accent: #95d5b2;
+            --light: #d8f3dc;
+            --dark: #1b4332;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+        
+        /* Navigation */
+        nav {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(27, 67, 50, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('maluca.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Card Hover Effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Image Hover Effects */
+        .img-hover {
+            overflow: hidden;
+        }
+        
+        .img-hover img {
+            transition: transform 0.5s ease;
+        }
+        
+        .img-hover:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Tab Active State */
+        .tab-active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        /* Custom Button */
+        .btn-custom {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-custom:hover::before {
+            left: 100%;
+        }
+        
+        /* Loading Animation */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--secondary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Parallax Effect */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 bg-green-900 text-white py-4 px-6 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="logo.png" alt="Logo" class="h-12 w-12 rounded-full">
+                <h1 class="text-2xl font-bold">Maluca Villa</h1>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-green-300 transition-colors">Home</a>
+                <a href="#about" class="nav-link hover:text-green-300 transition-colors">About</a>
+                <a href="#kalaw" class="nav-link hover:text-green-300 transition-colors">Kalaw</a>
+                <a href="#services" class="nav-link hover:text-green-300 transition-colors">Services</a>
+                <a href="#coffee" class="nav-link hover:text-green-300 transition-colors">Coffee</a>
+                <a href="#menu" class="nav-link hover:text-green-300 transition-colors">Menu</a>
+                <a href="#products" class="nav-link hover:text-green-300 transition-colors">Products</a>
+                <a href="#gallery" class="nav-link hover:text-green-300 transition-colors">Gallery</a>
+                <a href="#events" class="nav-link hover:text-green-300 transition-colors">Events</a>
+                <a href="#contact" class="nav-link hover:text-green-300 transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 mt-4 py-4 px-6 rounded-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-green-300 transition-colors">Home</a>
+                <a href="#about" class="hover:text-green-300 transition-colors">About</a>
+                <a href="#kalaw" class="hover:text-green-300 transition-colors">Kalaw</a>
+                <a href="#services" class="hover:text-green-300 transition-colors">Services</a>
+                <a href="#coffee" class="hover:text-green-300 transition-colors">Coffee</a>
+                <a href="#menu" class="hover:text-green-300 transition-colors">Menu</a>
+                <a href="#products" class="hover:text-green-300 transition-colors">Products</a>
+                <a href="#gallery" class="hover:text-green-300 transition-colors">Gallery</a>
+                <a href="#events" class="hover:text-green-300 transition-colors">Events</a>
+                <a href="#contact" class="hover:text-green-300 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 float-animation">Bring the Earth to Your Skin</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Experience natural dining, camping, and wellness at Maluca Villa in Kalaw</p>
+            <a href="#services" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                Explore Our Services
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl text-white"></i>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Maluca Villa</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our story rooted in the natural beauty and culture of Kalaw</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Our Brand Story</h3>
+                    <p class="text-gray-600 mb-4">Maluca Villa is more than just a destination; it's a celebration of the natural beauty and cultural richness of Kalaw. Our brand spirit focuses on the people of Kalaw: humble, loving, and kind.</p>
+                    <p class="text-gray-600 mb-4">We believe in creating a pure connection with the warmth of human nature and the freshness of mother nature. Our products feature 100% natural ingredients ethically sourced from the Kalaw region.</p>
+                    <p class="text-gray-600 mb-6">At Maluca Villa, we're committed to building a positive and passionate team with family spirit, the same value we bring to our relationship with you, our guests.</p>
+                    <a href="#contact" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                        Visit Us Today
+                    </a>
+                </div>
+                
+                <div class="img-hover rounded-xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <img src="malucavilla.jpg" alt="Maluca Villa" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <!-- Founder Story -->
+            <div class="mt-20 bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">Founder's Story & Go Green Initiative</h3>
+                <p class="text-gray-600 mb-6">Founded in 2018 in Kalaw, Maluca Villa started as a passion project to create Go Green experiences. Our journey began with a simple vision: to share the beauty of sustainable living with our community.</p>
+                
+                <h4 class="text-xl font-semibold text-green-700 mb-3">Why Kalaw?</h4>
+                <p class="text-gray-600 mb-4">We chose Kalaw because:</p>
+                <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                    <li>Shan State locals cultivate trees, plants, and crops abundantly</li>
+                    <li>The fresh natural environment allows people to thrive in harmony with nature</li>
+                    <li>Living surrounded by green forests that produce oxygen improves health and longevity</li>
+                    <li>We believe in reducing environmental impact and improving our lifestyle</li>
+                </ul>
+                
+                <h4 class="text-xl font-semibold text-green-700 mb-3">Our Commitment to Sustainability</h4>
+                <p class="text-gray-600 mb-4">We started practicing the three R's: <strong>Reduce – Reuse – Recycle</strong> to address global environmental challenges including:</p>
+                <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                    <li>Global warming and climate change</li>
+                    <li>Ocean and land pollution</li>
+                    <li>Waste disposal problems</li>
+                    <li>Excessive energy consumption leading to carbon emissions</li>
+                    <li>Loss of biodiversity</li>
+                </ul>
+                
+                <div class="bg-green-50 rounded-lg p-6 mt-8">
+                    <h4 class="text-xl font-semibold text-green-700 mb-3">Join Our Green Movement</h4>
+                    <p class="text-gray-600 mb-4">At Maluca Villa, we're committed to preserving Kalaw's natural beauty for future generations. Every small action counts toward a greener planet.</p>
+                    <a href="#contact" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                        Get Involved
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Kalaw Section -->
+    <section id="kalaw" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Discover Kalaw</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the charming hill station known for its cool climate and natural beauty</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="img-hover rounded-xl overflow-hidden shadow-xl" data-aos="fade-right">
+                    <img src="kalaw.jpg" alt="Kalaw Town View" class="w-full h-full object-cover">
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">The Heart of Shan State</h3>
+                    <p class="text-gray-600 mb-4">Kalaw is a picturesque hill town in the Shan State of Myanmar, situated at an elevation of 1,320 meters above sea level. Known for its cool climate throughout the year, it was once a popular British colonial retreat.</p>
+                    <p class="text-gray-600 mb-4">The town is surrounded by lush pine forests, terraced fields, and colorful flower gardens, creating a serene atmosphere that captivates visitors. Kalaw's unique blend of natural beauty, cultural diversity, and colonial charm makes it a must-visit destination.</p>
+                    <p class="text-gray-600 mb-6">What makes Kalaw truly special is its vibrant multicultural community, home to various ethnic groups including the Shan, Palaung, Pa-O, and Danu people.</p>
+                    <a href="#attractions" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                        Explore Attractions
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Attractions -->
+            <div id="attractions" class="mt-20">
+                <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center" data-aos="fade-up">Top Attractions in Kalaw</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Attraction 1 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="img-hover h-48">
+                            <img src="Kalaw Market.jpg" alt="Kalaw Market" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Kalaw Market</h4>
+                            <p class="text-gray-600">Experience the vibrant local market where various ethnic groups gather to sell fresh produce and traditional crafts.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 2 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="img-hover h-48">
+                            <img src="Green Hill Valley.jpg" alt="Green Hill Valley" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Green Hill Valley</h4>
+                            <p class="text-gray-600">Stunning valley views with terraced fields and traditional villages. Perfect for hiking and photography.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 3 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="img-hover h-48">
+                            <img src="Ethnic Shan Villages.jpg" alt="Shan Villages" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Ethnic Shan Villages</h4>
+                            <p class="text-gray-600">Visit nearby Shan villages to experience traditional lifestyles and interact with friendly villagers.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 4 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                        <div class="img-hover h-48">
+                            <img src="Colonial Architecture.jpg" alt="Colonial Buildings" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Colonial Architecture</h4>
+                            <p class="text-gray-600">Explore charming British colonial buildings that stand as a reminder of Kalaw's history.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Experience the best of dining, wellness, and nature at Maluca Villa</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="img-hover h-56">
+                        <img src="maluca.jpg" alt="Restaurant & Bar" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Restaurant & Bar</h3>
+                        <p class="text-gray-600 mb-4">Savor our popular food including Traditional Danu & Shan Kitchen Food, European dishes, refreshing cocktails, and barista coffee.</p>
+                        <a href="#menu" class="text-green-600 font-semibold hover:text-green-700 transition-colors">View Menu →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="img-hover h-56">
+                        <img src="showroom.jpg" alt="Healthcare Show Room" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Healthcare Show Room</h3>
+                        <p class="text-gray-600 mb-4">Explore our range of healthy food and natural products made with 100% natural ingredients from the Kalaw region.</p>
+                        <a href="#products" class="text-green-600 font-semibold hover:text-green-700 transition-colors">View Products →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="img-hover h-56">
+                        <img src="maluca villa tent.jpg" alt="Camping Tent" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Camping Tent Experience</h3>
+                        <p class="text-gray-600 mb-4">Enjoy our comfortable camping tents with blankets, beds, and more in the beautiful natural surroundings of Kalaw.</p>
+                        <a href="#contact" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Book Now →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="img-hover h-56">
+                        <img src="market.jpg" alt="Maluca Market" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Maluca Market</h3>
+                        <p class="text-gray-600 mb-4">Join our weekend market featuring local products, traditional dances, and special cultural activities.</p>
+                        <a href="#events" class="text-green-600 font-semibold hover:text-green-700 transition-colors">View Events →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="img-hover h-56">
+                        <img src="shop.jpg" alt="Souvenir Shop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Souvenir Shop</h3>
+                        <p class="text-gray-600 mb-4">Take home a piece of Kalaw with our selection of Maluca Natural Products and locally crafted souvenirs.</p>
+                        <a href="#contact" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Visit Shop →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="img-hover h-56">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="CSR Program" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">CSR Program</h3>
+                        <p class="text-gray-600 mb-4">Join us in our commitment to environmental sustainability through our recycling initiatives and collaborations.</p>
+                        <a href="#contact" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Get Involved →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Coffee Section -->
+    <section id="coffee" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Artisan Coffee Experience</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our specialty coffee crafted with passion and local expertise</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Maluca Coffee</h3>
+                    <p class="text-gray-600 mb-4">Nestled in the highlands of Shan State, Kalaw has become renowned for its exceptional coffee cultivation. At Maluca Villa, we celebrate this rich heritage by sourcing the finest local beans.</p>
+                    <p class="text-gray-600 mb-4">Our coffee journey begins with carefully selected beans from local plantations, where the cool climate and fertile soil create the perfect growing conditions. We work directly with farmers who share our commitment to sustainability.</p>
+                    <p class="text-gray-600 mb-6">Each cup of Maluca Villa coffee tells a story of tradition, quality, and the unique terroir of Kalaw. From bean to cup, we ensure that every step honors the natural environment.</p>
+                    <a href="#coffee-menu" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                        Explore Our Coffee Menu
+                    </a>
+                </div>
+                
+                <div class="img-hover rounded-xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <img src="been.jpg" alt="Coffee Beans" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <!-- Coffee Process -->
+            <div class="bg-gray-100 rounded-xl p-8 mb-16" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center">From Farm to Cup: Our Coffee Journey</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center card-hover bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-5xl text-green-600 mb-4">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Sustainable Farming</h4>
+                        <p class="text-gray-600">Partnering with local farmers who use eco-friendly cultivation methods</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="text-center card-hover bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-5xl text-green-600 mb-4">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Artisan Roasting</h4>
+                        <p class="text-gray-600">Small-batch roasting in-house to bring out unique flavors and aromas</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="text-center card-hover bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-5xl text-green-600 mb-4">
+                            <i class="fas fa-mortar-pestle"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Precision Grinding</h4>
+                        <p class="text-gray-600">Grinding fresh to order to preserve delicate flavors and oils</p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="text-center card-hover bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-5xl text-green-600 mb-4">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Expert Brewing</h4>
+                        <p class="text-gray-600">Crafted by skilled baristas using traditional and modern techniques</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coffee Menu -->
+            <div id="coffee-menu">
+                <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center" data-aos="fade-up">Our Coffee Selection</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Coffee 1 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative">
+                            <div class="img-hover h-56">
+                                <img src="mm.jpg" alt="Local Blend Maluca Coffee" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Local Blend</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Local Blend Maluca Coffee</h4>
+                            <p class="text-gray-600 mb-4">A comforting blend crafted from Kalaw’s finest Arabica beans, celebrating the warmth and richness of the region.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-bold"></span>
+                                <button class="order-coffee bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee 2 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative">
+                            <div class="img-hover h-56">
+                                <img src="Brazil.jpg" alt="Brazil Blend Maluca Coffee" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Brazil Blend</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Brazil Blend Maluca Coffee</h4>
+                            <p class="text-gray-600 mb-4">A bold and velvety roast sourced from Brazil’s renowned coffee plantations with rich chocolate notes.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-bold"></span>
+                                <button class="order-coffee bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee 3 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative">
+                            <div class="img-hover h-56">
+                                <img src="Cappuccino.jpg" alt="Cappuccino" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Popular</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Cappuccino</h4>
+                            <p class="text-gray-600 mb-4">A classic Italian-style coffee made with equal parts espresso, steamed milk, and milk foam.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-bold"></span>
+                                <button class="order-coffee bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee 4 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative">
+                            <div class="img-hover h-56">
+                                <img src="Espresso.jpg" alt="Espresso" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Strong</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Espresso</h4>
+                            <p class="text-gray-600 mb-4">A bold, concentrated shot brewed under high pressure to extract the pure essence of Arabica beans.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-bold"></span>
+                                <button class="order-coffee bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee 5 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                        <div class="relative">
+                            <div class="img-hover h-56">
+                                <img src="Americano.jpg" alt="Americano" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Classic</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Americano</h4>
+                            <p class="text-gray-600 mb-4">A bold yet smooth espresso diluted with hot water, offering a longer, lighter sip without losing depth.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-bold"></span>
+                                <button class="order-coffee bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee 6 -->
+                    <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                        <div class="relative">
+                            <div class="img-hover h-56">
+                                <img src="Latte.jpg" alt="Latte" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Creamy</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Latte</h4>
+                            <p class="text-gray-600 mb-4">A smooth, creamy blend of espresso and steamed milk, topped with a delicate layer of microfoam.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-bold"></span>
+                                <button class="order-coffee bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A culinary journey featuring local traditions and international favorites</p>
+            </div>
+            
+            <!-- Menu Tabs -->
+            <div class="flex justify-center mb-12" data-aos="fade-up">
+                <div class="inline-flex bg-white rounded-full p-1 shadow-md">
+                    <button class="menu-tab tab-active px-6 py-3 rounded-full text-sm font-semibold transition-all" data-tab="food">Food</button>
+                    <button class="menu-tab px-6 py-3 rounded-full text-sm font-semibold transition-all" data-tab="drinks">Drinks</button>
+                    <button class="menu-tab px-6 py-3 rounded-full text-sm font-semibold transition-all" data-tab="set-menus">Set Menus</button>
+                </div>
+            </div>
+            
+            <!-- Food Items -->
+            <div id="food-items" class="menu-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Food Item 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Traditional Danu Cuisine" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Traditional Danu Cuisine</h4>
+                            <p class="text-gray-600 text-sm">Authentic flavors from the Danu people of Kalaw</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Item 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Shan Kitchen Food" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Shan Kitchen Food</h4>
+                            <p class="text-gray-600 text-sm">Delicious Shan specialties with aromatic herbs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Item 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1540189549447-b6d2ea406479?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Bacon Salad" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Bacon Salad</h4>
+                            <p class="text-gray-600 text-sm">Fresh garden greens with crispy bacon</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Item 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1552611025-726c4bfb23e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Thai Cuisine" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Thai Cuisine</h4>
+                            <p class="text-gray-600 text-sm">Popular Thai dishes with perfect balance of flavors</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Item 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="European Food" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">European Food</h4>
+                            <p class="text-gray-600 text-sm">Classic European dishes with a local twist</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Item 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Healthy Food" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Healthy Food</h4>
+                            <p class="text-gray-600 text-sm">Nutritious options with organic ingredients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Drinks Items -->
+            <div id="drinks-items" class="menu-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Drink Item 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1622597467836-f3c7ca3b4c25?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Fresh Juice" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Fresh Juice</h4>
+                            <p class="text-gray-600 text-sm">100% natural fruit juices, no added sugar</p>
+                            <div class="text-green-600 font-bold mt-2">From 2,500 Ks</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drink Item 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1514362535861-d2141c40858d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Cocktail" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Cocktail</h4>
+                            <p class="text-gray-600 text-sm">Signature cocktails with local spirits</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drink Item 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Barista Coffee" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Barista Coffee</h4>
+                            <p class="text-gray-600 text-sm">Premium coffee beans roasted to perfection</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drink Item 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Local Tea" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Local Tea</h4>
+                            <p class="text-gray-600 text-sm">Traditional Burmese teas and herbal infusions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Set Menu Items -->
+            <div id="set-menus-items" class="menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Set Menu 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Danu Set Menu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Danu Set Menu</h4>
+                            <p class="text-gray-600 text-sm">Traditional Danu dishes including Deep Fried Tofu, Water Mustard Salad, Danu Red Bean Soup, Beef & Tea Leaf Curry, and Fried Banana with honey</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Set Menu 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="European Set Menu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">European Set Menu</h4>
+                            <p class="text-gray-600 text-sm">Cheese ball, Spring roll, Avocado Salad, Pumpkin Soup, Pan-Grilled Chicken or Mushroom ravioli, and Chocolate mousse</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Set Menu 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Chinese Set Menu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chinese Set Menu</h4>
+                            <p class="text-gray-600 text-sm">Fried Wonton, Cucumber salad, Mix vegetable Soup, Sweet & Sour Chicken, Chicken Gong Bao, and Chinese Tea</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Set Menu 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex">
+                        <div class="w-1/3">
+                            <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Chinese Seafood Set Menu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chinese Seafood Set Menu</h4>
+                            <p class="text-gray-600 text-sm">Fried Vegetable Spring Roll, Mixed vegetable Soup, Prawn Curry or Sweet & Sour Fish, and Chinese Tea</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Natural Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Natural Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our range of healthcare products made with 100% natural ingredients</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <div class="img-hover h-56">
+                            <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Herbal Face Cream" class="w-full h-full object-cover">
+                        </div>
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Bestseller</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Herbal Face Cream</h4>
+                        <p class="text-gray-600 mb-4">Made with wild herbs from Kalaw mountains, this cream nourishes and protects your skin naturally.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>100% Natural Ingredients</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>No Chemical Additives</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Eco-Friendly Packaging</span>
+                            </div>
+                        </div>
+                        <button class="buy-product w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-full transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <div class="img-hover h-56">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Essential Oil Blend" class="w-full h-full object-cover">
+                        </div>
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">New</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Essential Oil Blend</h4>
+                        <p class="text-gray-600 mb-4">A unique blend of essential oils from local plants that promotes relaxation and mental clarity.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Pure Plant Extracts</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Aromatherapy Grade</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Hand-processed</span>
+                            </div>
+                        </div>
+                        <button class="buy-product w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-full transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <div class="img-hover h-56">
+                            <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Herbal Tea Collection" class="w-full h-full object-cover">
+                        </div>
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Organic</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Herbal Tea Collection</h4>
+                        <p class="text-gray-600 mb-4">A selection of traditional herbal teas made from plants grown in our Kalaw gardens.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Locally Sourced Herbs</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>No Preservatives</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Health Benefits</span>
+                            </div>
+                        </div>
+                        <button class="buy-product w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-full transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative">
+                        <div class="img-hover h-56">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Natural Soap Set" class="w-full h-full object-cover">
+                        </div>
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Popular</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Natural Soap Set</h4>
+                        <p class="text-gray-600 mb-4">Handcrafted soaps made with natural oils and botanicals from the Kalaw region.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Plant-based Oils</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>No Synthetic Fragrances</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Biodegradable</span>
+                            </div>
+                        </div>
+                        <button class="buy-product w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-full transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative">
+                        <div class="img-hover h-56">
+                            <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Honey Infused Balm" class="w-full h-full object-cover">
+                        </div>
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Limited</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Honey Infused Balm</h4>
+                        <p class="text-gray-600 mb-4">A healing balm made with pure Kalaw honey and medicinal herbs for skin repair.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Raw Honey</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Medicinal Herbs</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Multi-purpose Use</span>
+                            </div>
+                        </div>
+                        <button class="buy-product w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-full transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative">
+                        <div class="img-hover h-56">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Bamboo Fiber Products" class="w-full h-full object-cover">
+                        </div>
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Eco-Friendly</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Bamboo Fiber Products</h4>
+                        <p class="text-gray-600 mb-4">Sustainable household items made from locally harvested bamboo fibers.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Sustainable Material</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Handmade Locally</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-600 mr-2"></i>
+                                <span>Zero Waste</span>
+                            </div>
+                        </div>
+                        <button class="buy-product w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-full transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Photo Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the beautiful surroundings and facilities at Maluca Villa</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Gallery Item 1 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Maluca Villa" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Camping Tents" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Natural Surroundings" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Restaurant Interior" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1544144433-d1b24bd10ad5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Wine Tasting Bar" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1476224203421-7ac9942a8aa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Market Day" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://images.unsplash.com/photo-1600878295392-1adcad5a3f8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Natural Products" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="img-hover rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="800">
+                    <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Souvenir Shop" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Upcoming Events</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Join us for special cultural festivals and activities at Maluca Villa</p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Event 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Cultural Festival" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <span class="inline-block bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">March 27-29, 2023</span>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">The Maluca MARKET Cultural Festival Edition</h3>
+                            <p class="text-gray-600 mb-6">Experience the rich cultural heritage of Kalaw at our special festival edition of Maluca Market. Enjoy traditional dances, local crafts, authentic cuisine, and much more in a celebration of our community's traditions.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>10AM - 6PM</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                                    <span>Kalaw Maluca Villa</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-ticket-alt text-green-600 mr-2"></i>
+                                    <span>2,500 Ks (1 day pass)</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-tshirt text-green-600 mr-2"></i>
+                                    <span>Myanmar traditional attire welcome</span>
+                                </div>
+                            </div>
+                            
+                            <a href="#contact" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                                Book Tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1476224203421-7ac9942a8aa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Weekend Market" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <span class="inline-block bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">Every Saturday & Sunday</span>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Maluca Weekend Market</h3>
+                            <p class="text-gray-600 mb-6">Join us every weekend for our regular market featuring local products, food stalls, and special activities. It's the perfect place to experience local culture, shop for unique souvenirs, and enjoy delicious food.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-clock text-green-600 mr-2"></i>
+                                    <span>10AM - 6PM</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                                    <span>Kalaw Maluca Villa</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-dollar-sign text-green-600 mr-2"></i>
+                                    <span>Free entry</span>
+                                </div>
+                                <div class="flex items-center text-gray-600">
+                                    <i class="fas fa-music text-green-600 mr-2"></i>
+                                    <span>Live music performances</span>
+                                </div>
+                            </div>
+                            
+                            <a href="#contact" class="btn-custom inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Get in touch with us for reservations, inquiries, or more information</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8">Visit Maluca Villa</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-green-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Address</h4>
+                                <p class="text-gray-600">No.45 (A) Easter Bo Gone, 3rd Quarter<br>Kalaw Township, Shan State, Myanmar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-green-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Phone</h4>
+                                <p class="text-gray-600">09 - 978283995<br>09 - 5199476</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-green-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">jin@vandalivingmall.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-green-600 text-xl mr-4 mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Opening Hours</h4>
+                                <p class="text-gray-600">Open Daily: 10:00am to 10:00pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                        
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-custom w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-full transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div data-aos="fade-up">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full">
+                        <h3 class="text-2xl font-bold">Maluca Villa</h3>
+                    </div>
+                    <p class="mb-6">Maluca Villa invites you to unwind in a peaceful sanctuary where nature, culture, and comfort harmonize.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-800 hover:bg-green-700 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-800 hover:bg-green-700 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-800 hover:bg-green-700 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-800 hover:bg-green-700 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-green-500">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-green-300 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-green-300 transition-colors">About Us</a></li>
+                        <li><a href="#kalaw" class="hover:text-green-300 transition-colors">Kalaw</a></li>
+                        <li><a href="#services" class="hover:text-green-300 transition-colors">Services</a></li>
+                        <li><a href="#coffee" class="hover:text-green-300 transition-colors">Coffee</a></li>
+                        <li><a href="#menu" class="hover:text-green-300 transition-colors">Menu</a></li>
+                        <li><a href="#products" class="hover:text-green-300 transition-colors">Products</a></li>
+                        <li><a href="#gallery" class="hover:text-green-300 transition-colors">Gallery</a></li>
+                        <li><a href="#events" class="hover:text-green-300 transition-colors">Events</a></li>
+                        <li><a href="#contact" class="hover:text-green-300 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-green-500">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Restaurant & Bar</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Healthcare Show Room</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Camping Tent</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Maluca Market</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Souvenir Shop</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">CSR Program</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-green-500">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-green-400"></i>
+                            <span>No.45 (A) Easter Bo Gone, 3rd Quarter<br>Kalaw Township, Shan State</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-green-400"></i>
+                            <span>09 - 978283995<br>09 - 5199476</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-green-400"></i>
+                            <span>jin@vandalivingmall.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-green-400"></i>
+                            <span>Open Daily: 10:00am to 10:00pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 mt-12 pt-8 text-center" data-aos="fade-up">
+                <p>&copy; 2023 Maluca Villa. All Rights Reserved. | Designed with <i class="fas fa-heart text-red-500"></i> for Thura Khant</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-green-600 hover:bg-green-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Order Modal -->
+    <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Order Confirmation</h3>
+            <p class="text-gray-600 mb-6">Thank you for your interest! Please contact us to place your order.</p>
+            <div class="flex justify-end space-x-4">
+                <button id="closeModal" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded-lg transition-colors">Close</button>
+                <a href="#contact" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Success Message -->
+    <div id="successMessage" class="fixed top-20 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-3"></i>
+            <span>Your message has been sent successfully!</span>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Menu Tabs
+        const menuTabs = document.querySelectorAll('.menu-tab');
+        const menuContents = document.querySelectorAll('.menu-content');
+        
+        menuTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                menuTabs.forEach(t => t.classList.remove('tab-active'));
+                // Add active class to clicked tab
+                tab.classList.add('tab-active');
+                
+                // Hide all menu contents
+                menuContents.forEach(content => content.classList.add('hidden'));
+                
+                // Show selected menu content
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(`${tabName}-items`).classList.remove('hidden');
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Order Modal
+        const orderModal = document.getElementById('orderModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        document.querySelectorAll('.order-coffee').forEach(btn => {
+            btn.addEventListener('click', () => {
+                orderModal.classList.remove('hidden');
+            });
+        });
+        
+        document.querySelectorAll('.buy-product').forEach(btn => {
+            btn.addEventListener('click', () => {
+                orderModal.classList.remove('hidden');
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            orderModal.classList.add('hidden');
+        });
+        
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to a server
+            // For this example, we'll just show a success message
+            
+            // Show success message
+            successMessage.classList.remove('translate-x-full');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 3 seconds
+            setTimeout(() => {
+                successMessage.classList.add('translate-x-full');
+            }, 3000);
+        });
+        
+        // Close modal when clicking outside
+        orderModal.addEventListener('click', (e) => {
+            if (e.target === orderModal) {
+                orderModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
